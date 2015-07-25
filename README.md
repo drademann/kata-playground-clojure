@@ -1,1 +1,1 @@
-# kata-playground4clojure
+# kata-playground-clojure
