@@ -2,6 +2,6 @@
 	(:require [clojure.test :refer :all]
 						[kata.primefactors :refer :all]))
 
-(deftest a-test
-	(testing "FIXME, I fail."
-		(is (= 0 1))))
+(deftest test-generate-primefactors
+	(testing "generation of prime factors for"
+		(is (= (generate-primefactors 1) '()) "number 1 returns empty list")))
