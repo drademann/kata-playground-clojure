@@ -1,4 +1,4 @@
-# Welcome to a Kata Playground for Clojure!
+# Kata Playground for Clojure
 
 I use this project to easily do Coding Katas. Each Kata comes with test and example.
 
