@@ -1,11 +1,12 @@
-# kata-playground-clojure
+# Welcome to a Kata Playground for Clojure!
 
-This is a project setup to quickly get started with various Coding Katas using Clojure.
+I use this project to easily do Coding Katas. Each Kata comes with test and example.
 
 Currently the following Katas are included:
-- Prime Factors
 
-(see [Wiki] (https://github.com/drademann/kata-playground-clojure/wiki) for more details)
+* Prime Factors (thanks to _Uncle Bob_ [Robert C. Martin's Prime Factor Kata] (http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata))
+* Word Wrap (thanks to _Uncle Bob_)
+* String Calculator (thanks to [Roy Osherove] (http://osherove.com/tdd-kata-1/))
 
 Remember the TDD and Kata rules:
 - Do one task at a time. 
