@@ -36,21 +36,21 @@
 ;
 
 (ns kata.string-calculator
-	(:require [clojure.test :refer :all]
-						[clojure.string :as str]))
+  (:require [clojure.test :refer :all]
+            [clojure.string :as str]))
 
 (defn calc
-	[s]
-	(letfn [(delim [d] (re-pattern (str "[" d "\n]")))
-					(sumUp [s d] (reduce + (map #(Integer/parseInt %) (str/split (str/trim s) (delim d)))))]
-		(cond (empty? s) 0
-					(.startsWith s "//") (sumUp (.substring s 3) (.charAt s 2))
-					:else (sumUp s ","))))
+  [s]
+  (letfn [(delim [d] (re-pattern (str "[" d "\n]")))
+          (sumUp [s d] (reduce + (map #(Integer/parseInt %) (str/split (str/trim s) (delim d)))))]
+    (cond (empty? s) 0
+          (.startsWith s "//") (sumUp (.substring s 3) (.charAt s 2))
+          :else (sumUp s ","))))
 
 (deftest calc-string-sum
-	(testing "sum of numbers contained in a string"
-		(is (= 0 (calc "")))
-		(is (= 1 (calc "1")))
-		(is (= 3 (calc "1,2")))
-		(is (= 3 (calc "1\n2")))
-		(is (= 3 (calc "//;\n1;2")))))
+  (testing "sum of numbers contained in a string"
+    (is (= 0 (calc "")))
+    (is (= 1 (calc "1")))
+    (is (= 3 (calc "1,2")))
+    (is (= 3 (calc "1\n2")))
+    (is (= 3 (calc "//;\n1;2")))))
