@@ -35,17 +35,9 @@
 ;		then the result is the sum of the numbers.
 ;
 
-(ns kata.string-calculator
+(ns kata.string-calculator-test
   (:require [clojure.test :refer :all]
-            [clojure.string :as str]))
-
-(defn calc
-  [s]
-  (letfn [(delim [d] (re-pattern (str "[" d "\n]")))
-          (sumUp [s d] (reduce + (map #(Integer/parseInt %) (str/split (str/trim s) (delim d)))))]
-    (cond (empty? s) 0
-          (.startsWith s "//") (sumUp (.substring s 3) (.charAt s 2))
-          :else (sumUp s ","))))
+            [kata.string-calculator :refer :all]))
 
 (deftest calc-string-sum
   (testing "sum of numbers contained in a string"

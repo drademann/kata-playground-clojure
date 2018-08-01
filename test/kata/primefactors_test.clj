@@ -5,18 +5,9 @@
 ; as an ordered list.
 ;
 
-(ns kata.primefactors
-  (:require [clojure.test :refer :all]))
-
-(defn generate-primefactors
-  "Generates the prime factors of a number."
-  [n]
-  (letfn [(divisible-by? [n d] (= 0 (mod n d)))]
-    (loop [pf [] n n c 2]
-      (cond (= n 1) pf
-            (divisible-by? n c) (recur (conj pf c) (/ n c) c)
-            :else (recur pf n (inc c))))))
-
+(ns kata.primefactors-test
+  (:require [clojure.test :refer :all])
+  (:require [kata.primefactors :refer  :all]))
 
 (deftest test-generate-primefactors
   (testing "generation of prime factors for"
