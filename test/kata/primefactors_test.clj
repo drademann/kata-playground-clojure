@@ -7,7 +7,7 @@
 
 (ns kata.primefactors-test
   (:require [clojure.test :refer :all])
-  (:require [kata.primefactors :refer  :all]))
+  (:require [kata.primefactors :refer :all]))
 
 (deftest test-generate-primefactors
   (testing "generation of prime factors for"
