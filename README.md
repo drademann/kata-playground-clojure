@@ -7,6 +7,7 @@ Currently the following Katas are included:
 * Prime Factors (thanks to _Uncle Bob_ [Robert C. Martin's Prime Factor Kata] (http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata))
 * Word Wrap (thanks to _Uncle Bob_)
 * String Calculator (thanks to [Roy Osherove] (http://osherove.com/tdd-kata-1/))
+* Counting Heads (found in _Programming Clojure_, hat tip to Jeff Brown)
 
 Remember the TDD and Kata rules:
 - Do one task at a time. 
